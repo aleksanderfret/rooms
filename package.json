@@ -6,12 +6,14 @@
     "compile": "turbo run compile",
     "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,md,json}\"",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,md,json}\"",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --turbo",
     "lint": "turbo run lint",
     "prepare-commit-msg": "npx ts-node -T scripts/prepareCommitMessage.ts",
     "pre-commit": "npm run validateBranch && npm run format:fix",
     "pre-push": "npm run check",
     "prepare": "husky install",
+    "test:e2e": "turbo run test:e2e",
+    "test:dev:e2e": "turbo run test:dev:e2e",
     "validateBranch": "npx ts-node -T scripts/validateBranchName.ts"
   },
   "devDependencies": {
