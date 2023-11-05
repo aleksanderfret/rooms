@@ -1,0 +1,21 @@
+{
+  "name": "web-e2e-tests",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test:dev:e2e": "playwright test",
+    "test:e2e": "start-server-and-test \"(cd ../../apps/web && npm run start)\" http://localhost:3000 \"playwright test\"",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "start-server-and-test": "^2.0.1",
+    "web": "*"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "dotenv": "^16.3.1",
+    "eslint-config-custom": "*",
+    "playwright": "^1.39.0",
+    "tsconfig": "*"
+  }
+}

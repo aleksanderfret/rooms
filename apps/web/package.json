@@ -22,6 +22,7 @@
     "@types/node": "^20.8.10",
     "@types/react-dom": "^18.2.7",
     "@types/react": "^18.2.33",
+    "dotenv-cli": "^7.3.0",
     "eslint-config-custom": "*",
     "postcss": "^8.4.31",
     "postcss-preset-mantine": "^1.9.1",

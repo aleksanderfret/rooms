@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": [".env"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
@@ -8,13 +8,16 @@
     },
     "check": {},
     "compile": {},
+    "dev": {
+      "dotEnv": [".env"],
+      "cache": false,
+      "persistent": true
+    },
     "lint": {},
     "lint:fix": {},
     "pre-commit": {},
     "pre-push": {},
-    "dev": {
-      "cache": false,
-      "persistent": true
-    }
+    "test:e2e": { "dependsOn": ["^build"] },
+    "test:dev:e2e": { "cache": false }
   }
 }
