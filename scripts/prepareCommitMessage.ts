@@ -152,9 +152,6 @@ const editCommitMessage = async (messageFile: string) => {
   }
 };
 
-console.log('TEST');
-
 if (/COMMIT_EDITMSG/g.test(messageFile)) {
-  console.log(messageFile);
   editCommitMessage(messageFile);
 }
