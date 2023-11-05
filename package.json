@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "check": "npm run format",
+    "build": "turbo run build",
+    "check": "turbo run check && npm run format",
+    "compile": "turbo run compile",
     "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,md,json}\"",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,md,json}\"",
-    "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "prepare-commit-msg": "npx ts-node -T scripts/prepareCommitMessage.ts",
