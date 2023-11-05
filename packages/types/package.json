@@ -23,7 +23,7 @@
       "prettier --write"
     ],
     "*.ts": [
-      "eslint -c .eslintrc.js --fix"
+      "eslint -c .eslintrc.js"
     ]
   }
 }
