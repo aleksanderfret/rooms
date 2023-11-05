@@ -10,25 +10,20 @@ module.exports = {
     'plugin:playwright/playwright-test',
     'plugin:import/typescript',
     './base-rules',
-  ],
-  plugins: ['@typescript-eslint', 'import', , 'check-file', 'playwright'],
+  ].map(require.resolve),
+  plugins: ['@typescript-eslint', 'import', , 'check-file'],
   parserOptions: {
-    project: [project, './packages/web-e2e-tests/tsconfig.json'],
+    project: [project, './packages/**/tsconfig.json'],
+  },
+  globals: {
+    React: true,
   },
   settings: {
     'import/resolver': {
       typescript: {
-        project: [project, './packages/web-e2e-tests/tsconfig.json'],
+        project: [project, './packages/**/tsconfig.json'],
       },
     },
   },
-  rules: {
-    'check-file/filename-naming-convention': [
-      'error',
-      {
-        'tests/**/*(.test)?.{js,ts}': 'KEBAB_CASE',
-        '**/index.{js,ts}': 'FLAT_CASE',
-      },
-    ],
-  },
+  ignorePatterns: ['node_modules/', 'dist/'],
 };
