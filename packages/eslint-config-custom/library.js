@@ -10,7 +10,7 @@ module.exports = {
     'plugin:playwright/playwright-test',
     'plugin:import/typescript',
     './base-rules',
-  ].map(require.resolve),
+  ],
   plugins: ['@typescript-eslint', 'import', , 'check-file'],
   parserOptions: {
     project: [project, './packages/**/tsconfig.json'],

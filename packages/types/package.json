@@ -8,8 +8,7 @@
     "check": "npm-run-all lint compile --parallel",
     "compile": "tsc --build --clean",
     "lint": "eslint .",
-    "lint:fix": "eslint . --max-warnings=0 --fix",
-    "pre-commit": "lint-staged"
+    "lint:fix": "eslint . --max-warnings=0 --fix"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
@@ -24,7 +23,7 @@
       "prettier --write"
     ],
     "*.ts": [
-      "eslint --fix"
+      "eslint -c .eslintrc.js --fix"
     ]
   }
 }
