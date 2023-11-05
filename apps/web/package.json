@@ -9,6 +9,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "pre-commit": "lint-staged",
     "start": "next start",
     "stylelint": "stylelint src/**/*.css --cache --allow-empty-input",
     "stylelint:fix": "stylelint src/**/*.css --cache --fix --allow-empty-input"
@@ -16,21 +17,34 @@
   "dependencies": {
     "@mantine/core": "^7.1.7",
     "next": "14.0.1",
-    "react-dom": "^18.2.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.1",
     "@types/node": "^20.8.10",
-    "@types/react-dom": "^18.2.7",
     "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.7",
     "dotenv-cli": "^7.3.0",
     "eslint-config-custom": "*",
+    "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
     "postcss-preset-mantine": "^1.9.1",
     "postcss-simple-vars": "^7.0.1",
     "stylelint-config": "*",
     "tsconfig": "*",
     "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "**/*.css": [
+      "stylelint --fix"
+    ],
+    "*.{ts,tsx,js,jsx,json,scss,css,md}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint -c .eslintrc.js --fix",
+      "npm run test:staged"
+    ]
   }
 }
