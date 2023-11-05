@@ -17,6 +17,8 @@
     "lint:fix": {},
     "pre-commit": {},
     "pre-push": {},
+    "stylelint": {},
+    "stylelint:fix": {},
     "test:e2e": { "dependsOn": ["^build"] },
     "test:dev:e2e": { "cache": false }
   }
