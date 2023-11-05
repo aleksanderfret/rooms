@@ -9,7 +9,9 @@
     "dev": "next dev",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "start": "next start"
+    "start": "next start",
+    "stylelint": "stylelint src/**/*.css --cache --allow-empty-input",
+    "stylelint:fix": "stylelint src/**/*.css --cache --fix --allow-empty-input"
   },
   "dependencies": {
     "@mantine/core": "^7.1.7",
@@ -27,6 +29,7 @@
     "postcss": "^8.4.31",
     "postcss-preset-mantine": "^1.9.1",
     "postcss-simple-vars": "^7.0.1",
+    "stylelint-config": "*",
     "tsconfig": "*",
     "typescript": "^5.2.2"
   }

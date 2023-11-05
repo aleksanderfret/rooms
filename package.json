@@ -12,6 +12,8 @@
     "pre-commit": "npm run validateBranch && npm run format:fix",
     "pre-push": "npm run check",
     "prepare": "husky install",
+    "stylelint": "turbo run stylelint",
+    "stylelint:fix": "turbo run stylelint:fix",
     "test:e2e": "turbo run test:e2e",
     "test:dev:e2e": "turbo run test:dev:e2e",
     "validateBranch": "npx ts-node -T scripts/validateBranchName.ts"
