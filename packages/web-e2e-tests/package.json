@@ -21,7 +21,8 @@
     "eslint-config-custom": "*",
     "lint-staged": "^15.0.2",
     "playwright": "^1.39.0",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "types": "*"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md}": [

@@ -44,7 +44,9 @@
     "stylelint-config": "*",
     "ts-jest": "^29.1.1",
     "tsconfig": "*",
-    "typescript": "^5.2.2"
+    "types": "*",
+    "typescript": "^5.2.2",
+    "utils": "*"
   },
   "lint-staged": {
     "**/*.css": [
