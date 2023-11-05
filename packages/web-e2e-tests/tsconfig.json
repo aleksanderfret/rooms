@@ -1,9 +1,5 @@
 {
   "extends": "tsconfig/base.json",
   "include": [".", ".eslintrc.js"],
-  "exclude": ["dist", "build", "node_modules"],
-  "compilerOptions": {
-    "module": "ESNext",
-    "target": "es6"
-  }
+  "exclude": ["dist", "build", "node_modules"]
 }
