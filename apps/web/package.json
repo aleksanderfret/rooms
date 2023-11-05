@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "check": "npm-run-all lint compile",
+    "check": "npm-run-all lint compile stylelint",
     "compile": "tsc --build --clean",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "pre-commit": "lint-staged",
