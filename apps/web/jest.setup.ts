@@ -1,7 +1,6 @@
+ 
 /* eslint-disable @typescript-eslint/no-empty-function -- required for jest */
- 
 /* eslint-disable @typescript-eslint/no-unsafe-assignment  -- required for jest */
- 
 import '@testing-library/jest-dom';
 
 const { getComputedStyle } = window;
