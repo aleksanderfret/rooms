@@ -15,8 +15,11 @@
     "prepare": "husky install",
     "stylelint": "turbo run stylelint",
     "stylelint:fix": "turbo run stylelint:fix",
+    "test": "turbo run test",
     "test:e2e": "turbo run test:e2e",
     "test:dev:e2e": "turbo run test:dev:e2e",
+    "test:update": "turbo run test:update",
+    "test:watch": "turbo run test:watch",
     "validateBranch": "npx ts-node -T scripts/validateBranchName.ts"
   },
   "devDependencies": {

@@ -27,13 +27,13 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'dist/'],
+  ignorePatterns: ['node_modules/', 'dist/', 'src/__mocks__/**/*.js'],
   plugins: ['check-file'],
   rules: {
     'check-file/filename-naming-convention': [
       'error',
       {
-        'src/app/**/*.{jsx,tsx,js,ts}': 'KEBAB_CASE',
+        'src/app/**/*(.test)?.{jsx,tsx,js,ts}': 'KEBAB_CASE',
         'src/components/**/*.{jsx,tsx}': 'PASCAL_CASE',
         'src/components/**/*.{js,ts}': 'CAMEL_CASE',
         '**/index.{js,ts}': 'FLAT_CASE',

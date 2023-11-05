@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "check": "npm-run-all lint compile stylelint",
+    "check": "npm-run-all lint compile stylelint test",
     "compile": "tsc --build --clean",
     "dev": "next dev --turbo",
     "lint": "next lint",
@@ -12,7 +12,11 @@
     "pre-commit": "lint-staged",
     "start": "next start",
     "stylelint": "stylelint src/**/*.css --cache --allow-empty-input",
-    "stylelint:fix": "stylelint src/**/*.css --cache --fix --allow-empty-input"
+    "stylelint:fix": "stylelint src/**/*.css --cache --fix --allow-empty-input",
+    "test": "jest --ci",
+    "test:staged": "jest --bail --findRelatedTests --passWithNoTests",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@mantine/core": "^7.1.7",
@@ -22,16 +26,23 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.1",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/jest": "^29.5.7",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.7",
     "dotenv-cli": "^7.3.0",
     "eslint-config-custom": "*",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
     "postcss-preset-mantine": "^1.9.1",
     "postcss-simple-vars": "^7.0.1",
     "stylelint-config": "*",
+    "ts-jest": "^29.1.1",
     "tsconfig": "*",
     "typescript": "^5.2.2"
   },
@@ -43,7 +54,7 @@
       "prettier --write"
     ],
     "*.{js,jsx,ts,tsx}": [
-      "eslint -c .eslintrc.js --fix",
+      "eslint --fix",
       "npm run test:staged"
     ]
   }
