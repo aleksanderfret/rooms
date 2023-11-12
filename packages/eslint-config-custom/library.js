@@ -3,11 +3,15 @@ const { resolve } = require('node:path');
 const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
+  env: {
+    node: true,
+    es2023: true,
+    jest: true,
+  },
   extends: [
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:playwright/playwright-test',
     'plugin:import/typescript',
     './base-rules',
   ],
