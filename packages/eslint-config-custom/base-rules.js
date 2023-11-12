@@ -22,8 +22,8 @@ module.exports = {
     'check-file/filename-naming-convention': [
       'error',
       {
-        '**/*.{jsx,tsx}': 'PASCAL_CASE',
-        '**/*.{js,ts}': 'CAMEL_CASE',
+        'src/**/*.{jsx,tsx}': 'PASCAL_CASE',
+        'src/**/*(.test)?.{js,ts}': 'CAMEL_CASE',
         '**/index.{js,ts}': 'FLAT_CASE',
       },
     ],
