@@ -2,25 +2,44 @@
 
 # dependencies
 node_modules
-.pnp
+/.pnp
 .pnp.js
+.yarn/install-state.gz
+
+# output
+/build
+/dist
+/temp
+/node_modules
+.next/
+/out
 
 # testing
 coverage
+/.nyc_output
 
-# next.js
-.next/
-out/
-build
 
 # misc
 .DS_Store
 *.pem
 
-# debug
+# Logs
+logs
+*.log
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
 # local env files
 .env
@@ -34,3 +53,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# linting
+.stylelintcache
+.eslintcache
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
