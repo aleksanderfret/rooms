@@ -4,7 +4,8 @@
   "private": true,
   "files": [
     "base.json",
-    "next.json"
+    "nextjs.json",
+    "nestjs.json"
   ],
   "publishConfig": {
     "access": "public"

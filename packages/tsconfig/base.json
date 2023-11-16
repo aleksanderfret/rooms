@@ -26,6 +26,7 @@
     "preserveConstEnums": true,
     "preserveWatchOutput": true,
     "pretty": true,
+    "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
