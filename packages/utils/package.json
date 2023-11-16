@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "check": "npm-run-all lint compile test",
+    "check": "npm-run-all lint test compile",
     "compile": "tsc --build --clean",
     "lint": "eslint . ",
     "lint:fix": "eslint . --max-warnings=0 --fix",
