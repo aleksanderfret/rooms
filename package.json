@@ -38,8 +38,8 @@
     "packages/*"
   ],
   "validateGitNames": {
-    "pattern": "^(main|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style){1}/rms-[0-9]{1,}/[a-z0-9-]{4,120})$",
-    "feedback": "Branch name should follow the pattern: '^(main|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style){1}/rms-[0-9]{1,}/[a-z0-9-]{4,120})$'",
+    "pattern": "^(main|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style|deploy){1}/rms-[0-9]{1,}/[a-z0-9-]{4,120})$",
+    "feedback": "Branch name should follow the pattern: '^(main|dev|staging|qa|test){1}$|^((fix|feat|chore|refactor|docs|style|deploy){1}/rms-[0-9]{1,}/[a-z0-9-]{4,120})$'",
     "ticketNumberMinLength": 1,
     "ticketPrefix": "rms"
   }
