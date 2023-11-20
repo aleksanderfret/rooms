@@ -12,6 +12,7 @@
     "test:e2e": "start-server-and-test \"(cd ../../apps/web && npm run start)\" http://localhost:3000 \"playwright test\""
   },
   "dependencies": {
+    "api": "*",
     "start-server-and-test": "^2.0.2",
     "web": "*"
   },
