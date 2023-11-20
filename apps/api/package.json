@@ -14,7 +14,7 @@
     "dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint . ",
+    "lint": "eslint .",
     "lint:fix": "eslint . --max-warnings=0 --fix",
     "pre-commit": "lint-staged",
     "test": "jest --ci",
